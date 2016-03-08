@@ -33,6 +33,7 @@ class InformixServiceProvider extends ServiceProvider
         $this->app->resolving('queue', function ($queue) {
             $queue->addConnector('informix', function () {
                 return new InformixConnector($this->app['db']);
-        });
+            });
+        });    
     }
 }
