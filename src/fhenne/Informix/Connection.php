@@ -29,7 +29,8 @@ class Connection extends \Illuminate\Database\Connection
         $options = null;
 
         // Create the connection
-        $this->connection = Connector::createConnection($dsn, $config, $options);
+        $connector = new Connector();
+        $this->connection = $connector->createConnection($dsn, $config, $options);
 
         // Select database
         $this->db = $this->connection->selectDatabase($config['database']);
