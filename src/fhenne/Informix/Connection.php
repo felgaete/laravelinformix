@@ -1,4 +1,4 @@
-<?php namespace Fhenne\Informix;
+<?php namespace fhenne\Informix;
 
 use fhenne\Informix\Query\Processor;
 use fhenne\Informix\Query\Grammar as QueryGrammar;
