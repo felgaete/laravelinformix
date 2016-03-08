@@ -33,7 +33,7 @@ class Connection extends \Illuminate\Database\Connection
         $this->connection = $connector->createConnection($dsn, $config, $options);
 
         // Select database
-        $this->db = $this->connection->selectDatabase($config['database']);
+        // $this->db = $this->connection->selectDatabase($config['database']);
 
         // $this->useDefaultPostProcessor();
     }
