@@ -1,4 +1,4 @@
-<?php namespace Fhenne\Informix;
+<?php namespace fhenne\Informix;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Model;
