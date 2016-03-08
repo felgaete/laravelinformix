@@ -35,7 +35,7 @@ class Connection extends \Illuminate\Database\Connection
         // Select database
         // $this->db = $this->connection->selectDatabase($config['database']);
 
-        // $this->useDefaultPostProcessor();
+        $this->useDefaultPostProcessor();
     }
 
     protected function getDSN(array $config) {
