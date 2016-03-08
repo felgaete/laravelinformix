@@ -4,6 +4,8 @@ use Illuminate\Database\ConnectionResolverInterface;
 use Illuminate\Queue\Connectors\ConnectorInterface;
 // use PDO;
 use Illuminate\Database\Connectors\Connector;
+use fhenne\Informix\Query\Grammar;
+use fhenne\Informiy\Query\Processor;
 
 class InformixConnector extends Connector implements ConnectorInterface
 {
@@ -18,6 +20,8 @@ class InformixConnector extends Connector implements ConnectorInterface
     public function __construct(ConnectionResolverInterface $connections)
     {
         $this->connections = $connections;
+        $this->grammar = new Grammar();
+        $this->processor = new Processor();
     }
 
     public function connect(array $config){
