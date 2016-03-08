@@ -1,4 +1,4 @@
-<?php namespace Fhenne\Informix\Queue;
+<?php namespace fhenne\Informix\Queue;
 
 use Illuminate\Database\ConnectionResolverInterface;
 use Illuminate\Queue\Connectors\ConnectorInterface;
