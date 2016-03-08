@@ -2,7 +2,7 @@
 
 use Illuminate\Database\ConnectionResolverInterface;
 use Illuminate\Queue\Connectors\ConnectorInterface;
-use PDO;
+// use PDO;
 use Illuminate\Database\Connectors\Connector;
 
 class InformixConnector extends Connector implements ConnectorInterface
