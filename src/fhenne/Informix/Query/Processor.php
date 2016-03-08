@@ -1,4 +1,4 @@
-<?php namespace Fhenne\Informix\Query;
+<?php namespace fhenne\Informix\Query;
 
 use Illuminate\Database\Query\Processors\Processor as BaseProcessor;
 use Illuminate\Database\Query\Builder;
