@@ -24,8 +24,8 @@ class Connection extends \Illuminate\Database\Connection
         // Build the connection string
         $dsn = $this->getDsn($config);
 
-        // You can pass options directly to the MongoDB constructor
-        $options = $this->getOptions($config);
+        // You can pass options directly to the InformixDB constructor
+        $options = null;
 
         // Create the connection
         $this->connection = $this->createConnection($dsn, $config, $options);
@@ -33,7 +33,7 @@ class Connection extends \Illuminate\Database\Connection
         // Select database
         $this->db = $this->connection->selectDatabase($config['database']);
 
-        $this->useDefaultPostProcessor();
+        // $this->useDefaultPostProcessor();
     }
 
     protected function getDSN(array $config) {
