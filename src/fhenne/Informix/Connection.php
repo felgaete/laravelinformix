@@ -2,6 +2,7 @@
 
 use fhenne\Informix\Query\Processor;
 use fhenne\Informix\Query\Grammar as QueryGrammar;
+use Illuminate\Database\Connectors\Connector;
 
 class Connection extends \Illuminate\Database\Connection
 {
@@ -28,7 +29,7 @@ class Connection extends \Illuminate\Database\Connection
         $options = null;
 
         // Create the connection
-        $this->connection = $this->createConnection($dsn, $config, $options);
+        $this->connection = Connector::createConnection($dsn, $config, $options);
 
         // Select database
         $this->db = $this->connection->selectDatabase($config['database']);
