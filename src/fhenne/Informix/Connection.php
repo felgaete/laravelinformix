@@ -9,12 +9,12 @@ class Connection extends \Illuminate\Database\Connection
     protected $db;
     protected $connection;
 
-    protected $options = [
-        PDO::ATTR_CASE => PDO::CASE_NATURAL,
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        PDO::ATTR_ORACLE_NULLS => PDO::NULL_NATURAL,
-        PDO::ATTR_STRINGIFY_FETCHES => false,
-    ];
+    // protected $options = [
+    //     PDO::ATTR_CASE => PDO::CASE_NATURAL,
+    //     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    //     PDO::ATTR_ORACLE_NULLS => PDO::NULL_NATURAL,
+    //     PDO::ATTR_STRINGIFY_FETCHES => false,
+    // ];
 
 
     public function __construct(array $config)
