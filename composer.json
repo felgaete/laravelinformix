@@ -3,6 +3,7 @@
     "description": "A Informix based Eloquent model and Query builder for Laravel (Moloquent)",
     "keywords": ["laravel","eloquent","informix","database","model","moloquent"],
     "homepage": "http://github.com/fhenne/laravel-informix",
+    "version": "0.1",
     "authors": [
         {
             "name": "Frederik Henne"
