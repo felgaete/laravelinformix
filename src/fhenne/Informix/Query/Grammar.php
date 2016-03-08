@@ -1,4 +1,4 @@
-<?php namespace fhenne\Informix\Query;
+<?php namespace Fhenne\Informix\Query;
 
 use Illuminate\Database\Query\Grammars\Grammar as BaseGrammar;
 use Illuminate\Database\Query\Builder;

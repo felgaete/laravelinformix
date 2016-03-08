@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-0": {
-            "bsa\\Informix": "src/"
+            "Fhenne\\Informix": "src/"
         }
     },
     "autoload-dev": {
