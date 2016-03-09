@@ -33,8 +33,6 @@ class Connection extends \Illuminate\Database\Connection
         $this->connection = $connector->createConnection($dsn, $config, $options);
         $this->setQueryGrammar(new Grammar());
         $this->setPostProcessor(new Processor());
-        // Select database
-        $this->db = $this->selectDatabase($config['database']);
 
     }
 
