@@ -1,7 +1,8 @@
 <?php namespace fhenne\Informix\Query;
 
 use Illuminate\Database\Query\Grammars\Grammar as BaseGrammar;
-use fhenne\Informix\Query\Builder;
+use fhenne\Informix\Query\Builder as NewBuilder;
+use Illuminate\Database\Query\Builder;
 
 class Grammar extends BaseGrammar
 {
