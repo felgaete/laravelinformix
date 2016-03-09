@@ -31,11 +31,10 @@ class Connection extends \Illuminate\Database\Connection
         // Create the connection
         $connector = new Connector();
         $this->connection = $connector->createConnection($dsn, $config, $options);
-        $this->setQueryGrammar(new Grammar());
-        $this->setPostProcessor(new Processor());
-        var_dump($this->connection);
+        $this->connection->setQueryGrammar(new Grammar());
+        $this->connection->setPostProcessor(new Processor());
         // Select database
-        // $this->db = $this->connection->selectDatabase($config['database']);
+        $this->db = $this->connection->selectDatabase($config['database']);
 
     }
 
