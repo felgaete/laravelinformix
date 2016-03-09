@@ -77,7 +77,7 @@ class Grammar extends BaseGrammar
      * @param  array  $values
      * @return string
      */
-    public function compileUpdate(Builder $query, $values)
+    public function compileUpdate(BaseBuilder $query, $values)
     {
         $sql = parent::compileUpdate($query, $values);
 
@@ -100,7 +100,7 @@ class Grammar extends BaseGrammar
      * @param  \Illuminate\Database\Query\Builder  $query
      * @return string
      */
-    public function compileDelete(Builder $query)
+    public function compileDelete(BaseBuilder $query)
     {
         $table = $this->wrapTable($query->from);
 
