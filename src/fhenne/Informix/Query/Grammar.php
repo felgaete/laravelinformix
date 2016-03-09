@@ -63,7 +63,7 @@ class Grammar extends BaseGrammar
      * @param  bool|string  $value
      * @return string
      */
-    protected function compileLock(Builder $query, $value)
+    protected function compileLock(BaseBuilder $query, $value)
     {
         if (is_string($value)) return $value;
 
