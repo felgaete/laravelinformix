@@ -1,6 +1,7 @@
 <?php namespace fhenne\Informix\Query;
 
 use Illuminate\Database\Query\Grammars\Grammar as BaseGrammar;
+use Illuminate\Database\Query\Builder as BaseBuilder;
 use fhenne\Informix\Query\Builder;
 
 class Grammar extends BaseGrammar
@@ -30,7 +31,7 @@ class Grammar extends BaseGrammar
      * @param  \Illuminate\Database\Query\Builder
      * @return string
      */
-    public function compileSelect(Builder $query)
+    public function compileSelect(BaseBuilder $query)
     {
         $sql = parent::compileSelect($query);
 
