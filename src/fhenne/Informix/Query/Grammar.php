@@ -30,7 +30,7 @@ class Grammar extends BaseGrammar
      * @param  \Illuminate\Database\Query\Builder
      * @return string
      */
-    public function compileSelect(\Illuminate\Database\Query\Builder $query)
+    public function compileSelect(Builder $query)
     {
         $sql = parent::compileSelect($query);
 
@@ -62,7 +62,7 @@ class Grammar extends BaseGrammar
      * @param  bool|string  $value
      * @return string
      */
-    protected function compileLock(\Illuminate\Database\Query\Builder $query, $value)
+    protected function compileLock(Builder $query, $value)
     {
         if (is_string($value)) return $value;
 
@@ -76,7 +76,7 @@ class Grammar extends BaseGrammar
      * @param  array  $values
      * @return string
      */
-    public function compileUpdate(\Illuminate\Database\Query\Builder $query, $values)
+    public function compileUpdate(Builder $query, $values)
     {
         $sql = parent::compileUpdate($query, $values);
 
@@ -99,7 +99,7 @@ class Grammar extends BaseGrammar
      * @param  \Illuminate\Database\Query\Builder  $query
      * @return string
      */
-    public function compileDelete(\Illuminate\Database\Query\Builder $query)
+    public function compileDelete(Builder $query)
     {
         $table = $this->wrapTable($query->from);
 
