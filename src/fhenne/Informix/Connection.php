@@ -1,7 +1,7 @@
 <?php namespace fhenne\Informix;
 
 use fhenne\Informix\Query\Processor;
-use fhenne\Informix\Query\Grammar as QueryGrammar;
+use fhenne\Informix\Query\Grammar;
 use Illuminate\Database\Connectors\Connector;
 
 class Connection extends \Illuminate\Database\Connection
@@ -57,7 +57,7 @@ class Connection extends \Illuminate\Database\Connection
     }
 
     protected function getDefaultQueryGrammar(){
-        return $this->withTablePrefix(new QueryGrammar);
+        return $this->withTablePrefix(new Grammar());
     }
 
 //    protected function getDefaultSchemaGrammar(){
