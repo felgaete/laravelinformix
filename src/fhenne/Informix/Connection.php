@@ -33,7 +33,7 @@ class Connection extends \Illuminate\Database\Connection
         $this->connection = $connector->createConnection($dsn, $config, $options);
         $this->setQueryGrammar(new Grammar());
         $this->setPostProcessor(new Processor());
-        var_dump($this->getPdoForSelect(true));
+        var_dump($this->connection);
         // Select database
         // $this->db = $this->connection->selectDatabase($config['database']);
 
