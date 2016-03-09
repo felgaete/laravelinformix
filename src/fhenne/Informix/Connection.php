@@ -32,7 +32,7 @@ class Connection extends \Illuminate\Database\Connection
         $connector = new Connector();
         $this->connection = $connector->createConnection($dsn, $config, $options);
         $this->setQueryGrammar(new Grammar());
-        $this->processor = new Processor();
+        $this->setPostProcessor(new Processor());
 
         // Select database
         // $this->db = $this->connection->selectDatabase($config['database']);
