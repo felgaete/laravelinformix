@@ -7,6 +7,6 @@ class Processor extends BaseProcessor
 {
 	public function processColumnListing($results)
     {
-        return array_values(array_map(function($r) { $r = (object) $r; return $r->strtolower(column_name); }, $results));
+        return array_values(array_map(function($r) { $r = (object) $r; return $r->strtoupper(column_name); }, $results));
     }
 }
