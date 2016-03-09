@@ -34,7 +34,7 @@ class Connection extends \Illuminate\Database\Connection
         $this->setQueryGrammar(new Grammar());
         $this->setPostProcessor(new Processor());
         // Select database
-        $this->db = $this->connection->selectDatabase($config['database']);
+        $this->db = $this->selectDatabase($config['database']);
 
     }
 
