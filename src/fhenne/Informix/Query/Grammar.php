@@ -1,8 +1,7 @@
 <?php namespace fhenne\Informix\Query;
 
 use Illuminate\Database\Query\Grammars\Grammar as BaseGrammar;
-use fhenne\Informix\Query\Builder as NewBuilder;
-use Illuminate\Database\Query\Builder;
+use fhenne\Informix\Query\Builder;
 
 class Grammar extends BaseGrammar
 {
@@ -31,7 +30,7 @@ class Grammar extends BaseGrammar
      * @param  \Illuminate\Database\Query\Builder
      * @return string
      */
-    public function compileSelect(Builder $query)
+    public function compileSelect(\Illuminate\Database\Query\Builder $query)
     {
         $sql = parent::compileSelect($query);
 
@@ -63,7 +62,7 @@ class Grammar extends BaseGrammar
      * @param  bool|string  $value
      * @return string
      */
-    protected function compileLock(Builder $query, $value)
+    protected function compileLock(\Illuminate\Database\Query\Builder $query, $value)
     {
         if (is_string($value)) return $value;
 
@@ -77,7 +76,7 @@ class Grammar extends BaseGrammar
      * @param  array  $values
      * @return string
      */
-    public function compileUpdate(Builder $query, $values)
+    public function compileUpdate(\Illuminate\Database\Query\Builder $query, $values)
     {
         $sql = parent::compileUpdate($query, $values);
 
@@ -100,7 +99,7 @@ class Grammar extends BaseGrammar
      * @param  \Illuminate\Database\Query\Builder  $query
      * @return string
      */
-    public function compileDelete(Builder $query)
+    public function compileDelete(\Illuminate\Database\Query\Builder $query)
     {
         $table = $this->wrapTable($query->from);
 
